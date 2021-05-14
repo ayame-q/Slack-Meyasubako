@@ -92,7 +92,9 @@ exports.getModalView = () => {
         value: `${index}`
       }
     )
-    template.blocks[0].element.initial_option = template.blocks[0].element.options[config.default_receiver]
+    template.blocks[0].element.initial_option = template.blocks[0].element.options.find((item) => {
+      return item.display_name === process.env.DEFAULT_RECEIVER
+    })
   });
 
   return template;

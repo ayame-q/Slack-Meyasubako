@@ -23,6 +23,7 @@ DB_PASSWORD=changeit
 SLACK_SIGNING_SECRET=[Slack Signing Secret]
 SLACK_BOT_TOKEN=[Slack Bot Token]
 RECEIVERS="委員長&副委員長:#目安箱_最高幹部,委員長:U000000,副委員長:U000000
+DEFAULT_RECEIVER=委員長&副委員長
 ```
 
 ## Slack Requirements
