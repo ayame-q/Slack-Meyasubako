@@ -7,7 +7,7 @@ Slackで簡易的な目安箱機能を実現するBot
 ## Install and Run
 1. Config Slack Bot on [Slack API](https://api.slack.com/apps) (see [Slack Requirements](#Slack-Requirements))
 2. Clone Repository
-3. Make .env file (see [.env](#.env))
+3. Make .env file (see [Config](#Config))
 4. Run `docker-compose up -d --build`
 
 ## Config
@@ -51,7 +51,7 @@ DEFAULT_RECEIVER=委員長&副委員長
 
 * [Slack Bolt](https://slack.dev/bolt/concepts)
 * [LoDash](https://lodash.com/docs/)
-* [NeDB](https://github.com/louischatriot/nedb)
+* [MongoDB](http://mongodb.github.io/node-mongodb-native/)
 * [Day.js](https://github.com/iamkun/dayjs)
 
 
