@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nodejs:
+    restart: always
+  mongo:
+    restart: always
+
+volumes:
+  database:
+    driver: local
