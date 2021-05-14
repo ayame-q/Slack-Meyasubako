@@ -1,0 +1,19 @@
+{
+  "name": "slack-meyasubako",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Meyasubako Slack bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "ayame.space <ayame.space@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^1.8.1",
+    "dayjs": "^1.10.4",
+    "lodash": "^4.17.21",
+    "mongodb": "^3.6.6"
+  }
+}
