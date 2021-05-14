@@ -6,6 +6,8 @@ services:
       - ".env"
     ports:
       - "$PORT:8080"
+    links:
+      - "mongo"
     volumes:
       - ".:/usr/src/app"
       - "/usr/src/app/node_modules"
