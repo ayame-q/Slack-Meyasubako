@@ -103,8 +103,12 @@ MongoClient.connect(`mongodb://${dbUserName}:${dbPassword}@mongo:27017`, functio
 			"value",
 		]);
 
+		const default_receiver = receivers.find((item) => {
+			return item.display_name === process.env.DEFAULT_RECEIVER
+		})
+
 		let send_text = "";
-		let channel = receivers[config.default_receiver].channel;
+		let channel = receivers[default_receiver].channel;
 		if (receiver_id in receivers) {
 			channel = receivers[receiver_id].channel;
 		}
