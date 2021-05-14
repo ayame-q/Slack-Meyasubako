@@ -108,7 +108,7 @@ MongoClient.connect(`mongodb://${dbUserName}:${dbPassword}@mongo:27017`, functio
 		})
 
 		let send_text = "";
-		let channel = receivers[default_receiver].channel;
+		let channel = default_receiver.channel;
 		if (receiver_id in receivers) {
 			channel = receivers[receiver_id].channel;
 		}
