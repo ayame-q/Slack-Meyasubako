@@ -38,11 +38,10 @@ MongoClient.connect(`mongodb://${dbUserName}:${dbPassword}@mongo:27017`, functio
 // ホームビューが表示されたときの処理
 	app.event("app_home_opened", async ({event, context, say}) => {
 		db.user
-			.count({_id: event.user})
-			.limit(1)
-			.toArray((err, count) => {
+			.find({_id: event.user})
+			.toArray((err, data) => {
 				assert.equal(err, null);
-				if (count < 1) {
+				if (data.length < 1) {
 					const user = {
 						_id: event.user,
 					};
@@ -163,7 +162,7 @@ MongoClient.connect(`mongodb://${dbUserName}:${dbPassword}@mongo:27017`, functio
 	app.message(async ({message, context, say}) => {
 		db.post.findOne({_id: message.thread_ts}, (err, data) => {
 			if (data) {
-				db.post.update(
+				db.post.updateOne(
 					{_id: message.thread_ts},
 					{
 						$push: {
