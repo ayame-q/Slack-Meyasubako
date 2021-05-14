@@ -83,7 +83,7 @@ exports.getHomeview = (posts) => {
     );
     for (const reply of post.replies) {
       const send_text = `> *<@${reply.sender.id}>*
-${reply.text.replace(/^(.*)$/g, "> $1")}
+${reply.text.replace(/^(.*)$/gm, "> $1")}
 > ${dayjs(reply.created_at).format("YYYY-MM-DD HH:mm:ss")}
 > 
 

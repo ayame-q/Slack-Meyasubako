@@ -119,7 +119,7 @@ MongoClient.connect(`mongodb://${dbUserName}:${dbPassword}@mongo:27017`, functio
 		}
 		send_text +=
 			">　\n" +
-			input_text.replace(/^(.*)$/g, "> $1") + "\n" +
+			input_text.replace(/^(.*)$/gm, "> $1") + "\n" +
 			">　\n" +
 			"(この発言のスレッドに投稿することで返信することができます。)\n";
 		app.client.chat
@@ -181,7 +181,7 @@ MongoClient.connect(`mongodb://${dbUserName}:${dbPassword}@mongo:27017`, functio
 							message.user
 						}>さんから返信が届きました。
 >　
-${message.text.replace(/^(.*)$/g, "> $1")}
+${message.text.replace(/^(.*)$/gm, "> $1")}
 >　
 (詳細は「ホーム」タブにてご確認ください。\n返信を送りたい場合は「ホーム」タブより新しく送信をお願いします。)`;
 						app.client.chat.postMessage({
