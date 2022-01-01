@@ -1,14 +1,15 @@
 # SlackMeyasubako
 
-Slackで簡易的な目安箱機能を実現するBot
-
-(2020年3月にINIAD-FES実行委員会用に製作したものをDocker対応したものです)
+Digital Suggestion Box Bot on Slack
+(Slackで簡易的な目安箱機能を実現するBot)
 
 ## Install and Run
 1. Config Slack Bot on [Slack API](https://api.slack.com/apps) (see [Slack Requirements](#Slack-Requirements))
 2. Clone Repository
 3. Make .env file (see [Config](#Config))
 4. Run `docker-compose up -d --build`
+(If you run on docker-compose for Production[Unrecommended],
+Run `docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build`)
 
 ## Config
 ### .env
