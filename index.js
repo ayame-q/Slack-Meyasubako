@@ -17,12 +17,16 @@ const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
 const assert = require("assert");
 
+const mongoOptions = {
+	useUnifiedTopology: true
+}
+
 const dbName = process.env.DB_NAME;
 const dbUserName = process.env.DB_USERNAME;
 const dbPassword = process.env.DB_PASSWORD;
 
 
-MongoClient.connect(`mongodb://${dbUserName}:${dbPassword}@mongo:27017`, function (err, client) {
+MongoClient.connect(`mongodb://${dbUserName}:${dbPassword}@mongo:27017`, mongoOptions,function (err, client) {
 	assert.equal(null, err);
 	console.log("Connected to mongodb");
 
